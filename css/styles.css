@@ -5,18 +5,19 @@
     font-style: normal;
 }
 
+
 .navbar-brand {
     display: flex;
     align-items: center;
     gap: 10px;
     font-family: "MontecatiniPro", sans-serif;
     font-size: 30px;
-    color: #FFFFFF
+    color: #FFFFFF;
 }
 
 .navbar-brand:hover,
 .navbar-brand:focus {
-    color: #FFFFFF
+    color: #FFFFFF;
 }
 
 
@@ -28,10 +29,31 @@ nav {
     font-family: "MontecatiniPro", sans-serif;
     font-size: 20px;
     color: #FFFFFF;
+}
+
+.titulo-seccion {
+    font-family: "MontecatiniPro", sans-serif;
+    font-size: 30px;
+    color: #000000;
 
 }
 
 .logo-svq {
     max-width: 50px;
     max-height: 50px;
+}
+
+.card {
+    height: 100%;
+    text-align: center;
+    border: 2px solid #000000;
+}
+
+.card h3 {
+    font-family: "MontecatiniPro", sans-serif;
+    color: #D10000;
+}
+
+.card p {
+    margin-bottom: 0px;
 }
