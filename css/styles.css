@@ -57,3 +57,12 @@ nav {
 .card p {
     margin-bottom: 0px;
 }
+
+.img-dark {
+    display: none;
+}
+
+.btn-link img {
+    vertical-align: middle;
+    display: inline-block;
+}

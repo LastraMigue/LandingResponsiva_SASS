@@ -1,0 +1,36 @@
+body {
+    background-color: #1E1F20 !important;
+    color: #E0E0E0;
+    background-image: url("../img/mosaico-dark.png") !important;
+    background-repeat: repeat;
+}
+
+nav {
+    background-color: #0F0F0F !important;
+}
+
+.titulo-seccion {
+    color: #FFFFFF !important;
+}
+
+.card {
+    background-color: #2B2C2E;
+    border: 2px solid #3F4144;
+    color: #E0E0E0;
+}
+
+.card p {
+    color: #B5B6B8;
+}
+
+.card h3 {
+    color: #FF4D4D;
+}
+
+.img-light {
+    display: none;
+}
+
+.img-dark {
+    display: block !important;
+}
