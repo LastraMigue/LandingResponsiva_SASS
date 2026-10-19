@@ -7,6 +7,7 @@
     <title>Sevilla FC</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/dark.css" id="dark-theme" disabled>
     <link rel="icon" href="img/sevilla-logo-blanco.png" type="image/png">
@@ -208,25 +209,65 @@
         <section id="estadio" class="container my-5">
             <h2 class="titulo-seccion mb-4">ESTADIO</h2>
             <div class="row justify-content-center">
-                <div class="col-md-12 d-flex justify-content-center">
-                    <img src="img/estadio.jpg" class="img-estadio img-fluid rounded border border-2 border-estadio"
+                <div class="col-12 d-flex justify-content-center">
+                    <img src="img/estadio.jpg" class="img-fluid rounded border border-dark border-2 w-100"
                         alt="Estadio Ramón Sánchez-Pizjuán">
                 </div>
-                <div class="col-md-12">
-                    <p class="pt-5 ps-5 pe-5">
-                        El Estadio Ramón Sánchez-Pizjuán, conocido como el templo de Nervión, fue
+                <div class="col-12 mt-4 px-2 px-md-5">
+                    <p>
+                        El Estadio Ramón Sánchez-Pizjuán, conocido como la bombonera de Nervión, fue
                         inaugurado el 7 de septiembre de 1958 y debe su nombre al histórico presidente
                         que impulsó su construcción y adquirió los terrenos. Con capacidad para más de
                         43.000 espectadores, es el epicentro de la pasión sevillista y uno de los estadios
                         más reconocidos y respetados del fútbol europeo.
                     </p>
-                    <p class="ps-5 pe-5">
+                    <p>
                         En su fachada de Preferencia luce el icónico mosaico de Santiago del Campo, creado
                         para el Mundial de 1982, símbolo de la identidad de Nervión. Escenario de noches
                         mágicas de Europa League donde la afición canta a capela el Himno del Centenario,
                         el Sánchez-Pizjuán es un fortín legendario donde además la Selección Española
                         se mantiene históricamente invicta.
                     </p>
+                </div>
+            </div>
+
+            <!-- Tarjetas de información del Estadio -->
+            <div class="row mt-4 g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 p-3">
+                        <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                            <i class="bi bi-geo-alt-fill text-danger fs-1 mb-2"></i>
+                            <span class="badge bg-danger mb-2">Nombre Oficial</span>
+                            <h3>Ramón Sánchez-Pizjuán</h3>
+                            <p>En honor al histórico <strong>presidente del club</strong>, conocido mundialmente como la
+                                <em>"Bombonera de Nervión"</em>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 p-3">
+                        <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                            <i class="bi bi-calendar2-check-fill text-danger fs-1 mb-2"></i>
+                            <span class="badge bg-danger mb-2">Inauguración</span>
+                            <h3>7 Septiembre 1958</h3>
+                            <p>Abrió sus puertas en <strong>1958</strong>, acumulando más de seis décadas de gestas
+                                futbolísticas y gloria europea.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 p-3">
+                        <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                            <i class="bi bi-people-fill text-danger fs-1 mb-2"></i>
+                            <span class="badge bg-danger mb-2">Aforo</span>
+                            <h3>43.883 Espectadores</h3>
+                            <p>Un <strong>aforo</strong> imponente que convierte al estadio en una auténtica caldera
+                                roja y blanca inexpugnable.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
