@@ -5,8 +5,14 @@ body {
     background-repeat: repeat;
 }
 
-nav {
+nav,
+footer {
     background-color: #0F0F0F !important;
+}
+
+footer {
+    color: #E0E0E0;
+    border-top: 1px solid #2B2C2E;
 }
 
 .titulo-seccion {
@@ -41,4 +47,8 @@ nav {
 
 .nav-link:hover {
     color: #DC3445;
+}
+
+.card-title-stadium {
+    color: #ffffff !important;
 }
