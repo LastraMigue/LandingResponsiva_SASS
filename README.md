@@ -52,3 +52,12 @@ La navegación principal se compone de **5 secciones clave** accesibles desde la
 * **Diseño Responsivo**: Rejilla fluida y puntos de ruptura de Bootstrap adaptados a cualquier resolución.
 * **Tipografía Corporativa**: Integración de la fuente tipográfica `MontecatiniPro`.
 * **Modo Oscuro / Claro**: Conmutador dinámico que conmuta hojas de estilo (`styles.css` y `dark.css`), iconos y mosaicos de fondo.
+
+---
+
+## Validación W3C
+
+La hoja de estilos (`css/styles.css`) ha sido validada satisfactoriamente mediante el servicio oficial **W3C CSS Validator** (CSS versión 3 + SVG), certificando que cumple con los estándares web y no contiene errores:
+
+![Validación W3C CSS](img/2026-10-19_21-37.png)
+
