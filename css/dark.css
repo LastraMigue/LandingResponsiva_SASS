@@ -38,3 +38,7 @@ nav {
 .border-estadio {
     border-color: #cacaca !important;
 }
+
+.nav-link:hover {
+    color: #DC3445;
+}
