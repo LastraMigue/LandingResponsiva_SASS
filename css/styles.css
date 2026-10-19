@@ -1,3 +1,4 @@
+/* Tipografía corporativa */
 @font-face {
     font-family: "MontecatiniPro";
     src: url("../fonts/MontecatiniPro-StrettoBold.woff2") format("woff2");
@@ -6,6 +7,7 @@
 }
 
 
+/* Barra de navegación y pie de página */
 .navbar-brand {
     display: flex;
     align-items: center;
@@ -53,6 +55,7 @@ footer .titulo-seccion {
     max-height: 50px;
 }
 
+/* Tarjetas generales y estilo de datos */
 .card {
     height: 100%;
     text-align: center;
@@ -90,6 +93,7 @@ footer .titulo-seccion {
     color: #000000 !important;
 }
 
+/* Tarjetas de plantilla con textos fluidos */
 .card-jugador {
     position: relative;
     overflow: hidden;
@@ -135,7 +139,7 @@ footer .titulo-seccion {
     word-break: break-word;
 }
 
-/* Patrocinios & Hover */
+/* Patrocinios: fila en escritorio y efecto hover */
 .patrocinios-row {
     display: flex;
     justify-content: center;
@@ -169,7 +173,7 @@ footer a img:hover {
     width: auto;
 }
 
-/* Navbar & Mobile Responsiveness */
+/* Botón hamburguesa y estilos del menú en móvil */
 .navbar-toggler {
     padding: 0.25rem 0.5rem;
     font-size: 1.25rem;
@@ -190,6 +194,7 @@ footer a img:hover {
     }
 }
 
+/* Patrocinios en móvil: cuadrícula 2x2 */
 @media (max-width: 768px) {
     .patrocinios-row {
         flex-wrap: wrap;
