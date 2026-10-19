@@ -22,28 +22,33 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand " href="#">
+            <a class="navbar-brand" href="#">
                 <img class="logo-svq img-light" src="img/sevilla-logo-blanco.png" alt="Logo Sevilla FC">
                 <img class="logo-svq img-dark" src="img/sevilla-logo-rojo.png" alt="Logo Sevilla FC">
                 <span>Sevilla FC</span>
             </a>
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="#historia">Historia</a></li>
-                <li class="nav-item"><a class="nav-link" href="#titulos">Títulos</a></li>
-                <li class="nav-item"><a class="nav-link" href="#estadio">Estadio</a></li>
-                <li class="nav-item"><a class="nav-link" href="#plantilla">Plantilla</a></li>
-                <li class="nav-item"><a class="nav-link" href="#patrocinios">Patrocinios</a></li>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSevilla"
+                aria-controls="navbarSevilla" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSevilla">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="#historia">Historia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#titulos">Títulos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#estadio">Estadio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#plantilla">Plantilla</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#patrocinios">Patrocinios</a></li>
 
-                <li class="nav-item d-flex align-items-center ms-lg-3">
-                    <button class="btn btn-link p-0 border-0" id="btn-theme" title="Cambiar modo">
-                        <img src="img/modo-claro.png" id="theme-icon" alt="Modo Oscuro"
-                            style="width: 24px; height: 24px;">
-                    </button>
-                </li>
-            </ul>
-            </ul>
+                    <li class="nav-item d-flex align-items-center ms-lg-3 my-2 my-lg-0">
+                        <button class="btn btn-link p-0 border-0" id="btn-theme" title="Cambiar modo">
+                            <img src="img/modo-claro.png" id="theme-icon" alt="Modo Oscuro"
+                                style="width: 24px; height: 24px;">
+                        </button>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
@@ -579,14 +584,87 @@
     </main>
 
     <footer>
-        <section id="patrocinios" class="container my-5">
-            <h2 class="titulo-seccion mb-4">PATROCINIOS</h2>
-            <div class="row justify-content-center">
+        <section id="patrocinios" class="container-fluid px-3 px-md-5 mt-5 mb-0">
+            <h2 class="titulo-seccion mb-4 text-center">PATROCINIOS</h2>
+            <div class="d-flex justify-content-center">
+                <a href="https://www.adidas.es/calzado-futbol" target="_blank">
+                    <img src="img/Adidas-blanco--footer-.png" alt="Adidas Footer" class="img-fluid"
+                        style="max-height: 70px">
+                </a>
+            </div>
 
+            <div class="patrocinios-row mt-4 pt-2 px-3">
+                <a href="https://www.fantokens.com/es/trade/sevilla-fc-fan-token" target="_blank">
+                    <img src="img/LOGO-socios_MUY_grande_3988x1324.png" alt="Socios.com" class="img-fluid">
+                </a>
+                <a href="https://www.caixabank.es/particular/home/particulares_es.html" target="_blank">
+                    <img src="img/la-caixa-white.png" alt="CaixaBank" class="img-fluid">
+                </a>
+                <a href="https://www.cruzcampo.es/" target="_blank">
+                    <img src="img/cruzcampo-white.png" alt="Cruzcampo" class="img-fluid">
+                </a>
+                <a href="https://mws.com/es/category/sevilla-fc?tab=live" target="_blank">
+                    <img src="img/matchwornshirtedit.png" alt="MatchWornShirt" class="img-fluid">
+                </a>
+                <a href="https://www.viagogo.es/Entradas-Deportes/Futbol/Sevilla-FC-Entradas" target="_blank">
+                    <img src="img/Logo-Viagogo.png" alt="Viagogo" class="img-fluid">
+                </a>
+                <a href="https://www.saytv.net/" target="_blank">
+                    <img src="img/Say-TV-blanco--footer-.png" alt="Say TV" class="img-fluid">
+                </a>
+                <a href="https://scalperscompany.com/" target="_blank">
+                    <img src="img/scalpers-1-.png" alt="Scalpers" class="img-fluid">
+                </a>
+                <a href="https://www.coca-cola.com/es/es" target="_blank">
+                    <img src="img/coca-cola-white.png" alt="Coca-Cola" class="img-fluid">
+                </a>
+                <a href="https://casarobles.es/" target="_blank">
+                    <img src="img/robles-white.png" alt="Robles" class="img-fluid">
+                </a>
+                <a href="https://www.andalucia.org/" target="_blank">
+                    <img src="img/Logo-Andalucia-vertical.png" alt="Andalucía" class="img-fluid">
+                </a>
+            </div>
+            <div class="d-flex justify-content-center" style="margin-top: 100px;">
+                <p class="text-center mb-0"
+                    style="color: #FFFFFF; font-family: 'MontecatiniPro', sans-serif; font-size: clamp(48px, 9vw, 80px); line-height: 1.1;">
+                    NUNCA<br>TE RINDAS
+                </p>
+            </div>
+
+            <div class="border-top border-white border-opacity-25 mt-3 pt-3 text-center pb-0">
+                <div class="footer-social d-flex justify-content-center gap-4 mb-2 fs-5">
+                    <a href="https://twitter.com/SevillaFC" target="_blank"
+                        class="text-white text-opacity-75 text-decoration-none" title="X (Twitter)">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+                    <a href="https://www.instagram.com/sevillafc" target="_blank"
+                        class="text-white text-opacity-75 text-decoration-none" title="Instagram">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/sevillafc" target="_blank"
+                        class="text-white text-opacity-75 text-decoration-none" title="Facebook">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="https://www.youtube.com/user/sevillafc" target="_blank"
+                        class="text-white text-opacity-75 text-decoration-none" title="YouTube">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@sevillafc" target="_blank"
+                        class="text-white text-opacity-75 text-decoration-none" title="TikTok">
+                        <i class="bi bi-tiktok"></i>
+                    </a>
+                </div>
+                <p class="mb-0 text-white text-opacity-50 small">
+                    © 2026 Sevilla FC S.A.D. — Todos los derechos reservados.
+                </p>
             </div>
         </section>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <script>
         const boton = document.getElementById('btn-theme');
         const darkTheme = document.getElementById('dark-theme');

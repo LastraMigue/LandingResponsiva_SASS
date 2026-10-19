@@ -11,7 +11,7 @@
     align-items: center;
     gap: 10px;
     font-family: "MontecatiniPro", sans-serif;
-    font-size: 35px;
+    font-size: clamp(24px, 5vw, 35px);
     color: #FFFFFF;
 }
 
@@ -20,7 +20,6 @@
     color: #FFFFFF;
 }
 
-
 nav,
 footer {
     background-color: #D10000;
@@ -28,8 +27,8 @@ footer {
 
 footer {
     color: #FFFFFF;
-    padding: 60px 0 30px 0;
-    margin-top: 80px;
+    padding: 10px 0 30px 0;
+    margin-top: 60px;
 }
 
 footer .titulo-seccion {
@@ -91,7 +90,6 @@ footer .titulo-seccion {
     color: #000000 !important;
 }
 
-/* Tarjetas de Jugadores (Plantilla) */
 .card-jugador {
     position: relative;
     overflow: hidden;
@@ -100,10 +98,11 @@ footer .titulo-seccion {
 
 .jugador-dorsal {
     position: absolute;
-    top: 10px;
-    right: 15px;
+    top: clamp(6px, 1.5vw, 10px);
+    right: clamp(8px, 2vw, 15px);
     font-family: "MontecatiniPro", sans-serif;
-    font-size: 35px;
+    font-size: clamp(18px, 3vw, 35px);
+    line-height: 1;
     color: #D10000;
 }
 
@@ -121,14 +120,99 @@ footer .titulo-seccion {
 
 .jugador-info {
     position: absolute;
-    top: 10px;
-    left: 15px;
+    top: clamp(6px, 1.5vw, 10px);
+    left: clamp(8px, 2vw, 15px);
+    max-width: 65%;
 }
 
 .jugador-nombre {
     font-family: "MontecatiniPro", sans-serif;
-    font-size: 26px;
+    font-size: clamp(13px, 2.2vw, 26px);
+    line-height: 1.05;
     color: #000000;
     text-transform: uppercase;
     margin: 0;
+    word-break: break-word;
+}
+
+/* Patrocinios & Hover */
+.patrocinios-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    padding: 8px 0;
+}
+
+.patrocinios-row a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.patrocinios-row img,
+footer a img {
+    object-fit: contain;
+    transition: transform 0.25s ease;
+}
+
+.patrocinios-row img:hover,
+footer a img:hover {
+    transform: scale(1.06);
+}
+
+.patrocinios-row img {
+    max-height: 58px;
+    width: auto;
+}
+
+/* Navbar & Mobile Responsiveness */
+.navbar-toggler {
+    padding: 0.25rem 0.5rem;
+    font-size: 1.25rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        padding: 0.75rem 0;
+    }
+
+    .nav-link {
+        font-size: 22px;
+        padding: 0.35rem 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .patrocinios-row {
+        flex-wrap: wrap;
+        overflow: visible;
+        justify-content: center;
+        gap: 1.5rem 1rem;
+        padding: 0.5rem 0;
+    }
+
+    .patrocinios-row a {
+        flex: 0 0 calc(50% - 1rem);
+        max-width: calc(50% - 1rem);
+        display: flex;
+        justify-content: center;
+    }
+
+    .patrocinios-row img {
+        max-height: 46px;
+        max-width: 100%;
+        width: auto;
+    }
+
+    footer a img[alt="Adidas Footer"] {
+        max-height: 55px !important;
+    }
 }
