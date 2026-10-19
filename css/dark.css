@@ -15,12 +15,12 @@ nav {
 
 .card {
     background-color: #2B2C2E;
-    border: 2px solid #3F4144;
+    border: 2px solid #cacaca;
     color: #E0E0E0;
 }
 
 .card p {
-    color: #B5B6B8;
+    color: #cacaca;
 }
 
 .card h3 {
@@ -33,4 +33,8 @@ nav {
 
 .img-dark {
     display: block !important;
+}
+
+.border-estadio {
+    border-color: #cacaca !important;
 }

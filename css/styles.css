@@ -66,3 +66,8 @@ nav {
     vertical-align: middle;
     display: inline-block;
 }
+
+.border-estadio {
+    border-color: #000000 !important;
+    /* Borde negro en modo claro */
+}
