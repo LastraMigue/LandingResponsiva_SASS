@@ -52,3 +52,15 @@ footer {
 .card-title-stadium {
     color: #ffffff !important;
 }
+
+.card-jugador {
+    border-color: #cacaca;
+}
+
+.jugador-dorsal {
+    color: #FF4D4D;
+}
+
+.jugador-nombre {
+    color: #FFFFFF;
+}
