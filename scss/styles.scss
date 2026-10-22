@@ -1,0 +1,269 @@
+// ==========================================
+// MÓDULOS MODERNOS DE SASS
+// ==========================================
+@use "sass:math";
+@use "sass:color";
+
+// ==========================================
+// VARIABLES
+// ==========================================
+$font-main: "MontecatiniPro", sans-serif;
+$color-primary: #D10000;
+$color-white: #FFFFFF;
+$color-black: #000000;
+
+// ==========================================
+// FUNCIONES Y MIXINS
+// ==========================================
+@function px-to-rem($pixels) {
+    @return math.div($pixels, 16) * 1rem;
+}
+
+@mixin respond-to($breakpoint) {
+    @if $breakpoint =='tablet' {
+        @media (max-width: 768px) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint =='desktop' {
+        @media (min-width: 992px) {
+            @content;
+        }
+    }
+}
+
+// ==========================================
+// ESTILOS BASE Y TIPOGRAFÍA
+// ==========================================
+@font-face {
+    font-family: "MontecatiniPro";
+    src: url("../fonts/MontecatiniPro-StrettoBold.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+// ==========================================
+// NAVEGACIÓN Y FOOTER
+// ==========================================
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: $font-main;
+    font-size: clamp(24px, 5vw, 35px);
+    color: $color-white;
+
+    &:hover,
+    &:focus {
+        color: $color-white;
+    }
+}
+
+nav,
+footer {
+    background-color: $color-primary;
+}
+
+footer {
+    color: $color-white;
+    padding: 10px 0 30px 0;
+    margin-top: 60px;
+
+    .titulo-seccion {
+        color: $color-white;
+    }
+}
+
+.nav-link {
+    font-family: $font-main;
+    font-size: px-to-rem(25);
+    color: $color-white;
+
+    &:hover {
+        color: color.scale($color-white, $lightness: -10%);
+    }
+}
+
+.titulo-seccion {
+    font-family: $font-main;
+    font-size: px-to-rem(35);
+    color: $color-black;
+}
+
+.logo-svq {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+// ==========================================
+// TARJETAS Y COMPONENTES
+// ==========================================
+.card {
+    height: 100%;
+    text-align: center;
+    border: 2px solid $color-black;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+    img {
+        object-fit: contain;
+    }
+
+    h3 {
+        font-family: $font-main;
+        color: $color-primary;
+    }
+
+    p {
+        margin-bottom: 0px;
+    }
+}
+
+.img-dark {
+    display: none;
+}
+
+.btn-link img {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.border-estadio {
+    border-color: $color-black !important;
+}
+
+.card-title-stadium {
+    color: $color-black !important;
+}
+
+// Tarjetas de jugadores
+.card-jugador {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4 / 5;
+}
+
+.jugador-dorsal {
+    position: absolute;
+    top: clamp(6px, 1.5vw, 10px);
+    right: clamp(8px, 2vw, 15px);
+    font-family: $font-main;
+    font-size: clamp(18px, 3vw, 35px);
+    line-height: 1;
+    color: $color-primary;
+}
+
+.jugador-img-wrapper {
+    height: 100%;
+}
+
+.jugador-img {
+    width: 100%;
+    height: 100%;
+    transform: scale(1.25);
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.jugador-info {
+    position: absolute;
+    top: clamp(6px, 1.5vw, 10px);
+    left: clamp(8px, 2vw, 15px);
+    max-width: 65%;
+}
+
+.jugador-nombre {
+    font-family: $font-main;
+    font-size: clamp(13px, 2.2vw, 26px);
+    line-height: 1.05;
+    color: $color-black;
+    text-transform: uppercase;
+    margin: 0;
+    word-break: break-word;
+}
+
+// ==========================================
+// PATROCINIOS Y RESPONSIVE
+// ==========================================
+.patrocinios-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    padding: 8px 0;
+
+    a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    img {
+        object-fit: contain;
+        transition: transform 0.25s ease;
+        max-height: 58px;
+        width: auto;
+
+        &:hover {
+            transform: scale(1.06);
+        }
+    }
+}
+
+footer a img {
+    transition: transform 0.25s ease;
+
+    &:hover {
+        transform: scale(1.06);
+    }
+}
+
+.navbar-toggler {
+    padding: 0.25rem 0.5rem;
+    font-size: 1.25rem;
+
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        padding: 0.75rem 0;
+    }
+
+    .nav-link {
+        font-size: 22px;
+        padding: 0.35rem 0;
+    }
+}
+
+@include respond-to('tablet') {
+    .patrocinios-row {
+        flex-wrap: wrap;
+        overflow: visible;
+        justify-content: center;
+        gap: 1.5rem 1rem;
+        padding: 0.5rem 0;
+
+        a {
+            flex: 0 0 calc(50% - 1rem);
+            max-width: calc(50% - 1rem);
+            display: flex;
+            justify-content: center;
+        }
+
+        img {
+            max-height: 46px;
+            max-width: 100%;
+            width: auto;
+        }
+    }
+
+    footer a img[alt="Adidas Footer"] {
+        max-height: 55px !important;
+    }
+}

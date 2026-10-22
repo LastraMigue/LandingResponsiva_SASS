@@ -1,0 +1,84 @@
+// ==========================================
+// VARIABLES PARA MODO OSCURO
+// ==========================================
+$bg-dark: #1E1F20;
+$text-light: #E0E0E0;
+$nav-footer-dark: #0F0F0F;
+$border-dark: #2B2C2E;
+$card-bg-dark: #2B2C2E;
+$gray-muted: #cacaca;
+$red-accent: #FF4D4D;
+$red-hover: #DC3445;
+$white: #FFFFFF;
+
+// ==========================================
+// MODO OSCURO
+// ==========================================
+body {
+    background-color: $bg-dark !important;
+    color: $text-light;
+    background-image: url("../img/mosaico-dark.png") !important;
+    background-repeat: repeat;
+
+    nav,
+    footer {
+        background-color: $nav-footer-dark !important;
+    }
+
+    footer {
+        color: $text-light;
+        border-top: 1px solid $border-dark;
+    }
+
+    .titulo-seccion {
+        color: $white !important;
+    }
+
+    .card {
+        background-color: $card-bg-dark;
+        border: 2px solid $gray-muted;
+        color: $text-light;
+
+        p {
+            color: $gray-muted;
+        }
+
+        h3 {
+            color: $red-accent;
+        }
+    }
+
+    .img-light {
+        display: none;
+    }
+
+    .img-dark {
+        display: block !important;
+    }
+
+    .border-estadio {
+        border-color: $gray-muted !important;
+    }
+
+    .nav-link {
+        &:hover {
+            color: $red-hover;
+        }
+    }
+
+    .card-title-stadium {
+        color: $white !important;
+    }
+
+    .card-jugador {
+        border-color: $gray-muted;
+    }
+
+    .jugador-dorsal {
+        color: $red-accent;
+    }
+
+    .jugador-nombre {
+        color: $white;
+    }
+}
