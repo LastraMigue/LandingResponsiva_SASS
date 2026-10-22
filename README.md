@@ -61,5 +61,7 @@ La hoja de estilos (`css/styles.css`) ha sido validada satisfactoriamente median
 
 ![Validación W3C CSS](img/2026-10-19_21-37.png)
 
-Enlace web: [https://adribarrera.github.io/LandingResponsiva](https://adribarrera.github.io/LandingResponsiva)
+## Enlace web - SASS
+
+Enlace web: [https://LastraMigue.github.io/LandingResponsiva_SASS](https://LastraMigue.github.io/LandingResponsiva_SASS)
 
