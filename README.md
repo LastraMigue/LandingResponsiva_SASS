@@ -1,13 +1,34 @@
-# Landing Page - Sevilla FC
+# Landing Page - Sevilla FC (Versión SCSS)
 
-Proyecto de desarrollo de una **Landing Page** responsiva dedicada al **Sevilla Fútbol Club**. La página ofrece un recorrido visual e interactivo por la identidad, la historia, los logros, la plantilla y los patrocinadores de la entidad nervionense, estructurada en una sola página (*Single Page Application*) con navegación fluida y soporte para modo claro y oscuro.
+Proyecto de desarrollo de una **Landing Page** responsiva dedicada al **Sevilla Fútbol Club**. Para esta versión del proyecto, se ha reconstruido y estructurado toda la landing page desde el principio utilizando el preprocesador **SASS / SCSS**, manteniendo con total fidelidad el diseño visual, la identidad corporativa y la experiencia de usuario de la versión original.
+
+La web ofrece un recorrido visual e interactivo por la identidad, historia, títulos, estadio, plantilla y patrocinadores del club nervionense, estructurada en una sola página (*Single Page Application*) con navegación fluida, diseño adaptable a cualquier dispositivo y soporte completo para modo claro y oscuro.
+
+---
+
+## Migración y Arquitectura con SCSS
+
+La principal novedad de esta rama radica en la reimplementación integral de las hojas de estilo mediante **SCSS**, aprovechando las ventajas de la preprocesamiento CSS moderno:
+
+* **Estructura modular y limpia**: Separación lógica entre los estilos base del sitio ([`scss/styles.scss`](scss/styles.scss)) y los estilos específicos del tema oscuro ([`scss/dark.scss`](scss/dark.scss)), que compilan respectivamente a [`css/styles.css`](css/styles.css) y [`css/dark.css`](css/dark.css).
+* **Variables SASS**: Centralización de tokens de diseño como colores corporativos (`$color-primary: #D10000`, `$color-white`, etc.), tipografías (`$font-main`), paleta del modo oscuro (`$bg-dark`, `$text-light`, `$card-bg-dark`, `$red-accent`) y bordes, facilitando el mantenimiento y la escalabilidad.
+* **Funciones y Módulos Modernos**: Empleo de las directivas `@use "sass:math"` y `@use "sass:color"`, incorporando funciones como `px-to-rem($pixels)` para cálculos tipográficos y espaciados dinámicos.
+* **Mixins Responsivos**: Definición de mixins de breakpoints (`@mixin respond-to($breakpoint)`) para encapsular media queries de tablet y escritorio (`respond-to('tablet')`, `respond-to('desktop')`), garantizando un código conciso y ordenado.
+* **Anidamiento (*Nesting*) y Selector Padre (`&`)**: Organización jerárquica de selectores, estados interactivos (`:hover`, `:focus`) y elementos anidados en tarjetas, navegación y componentes sin redundancia en el código fuente.
+* **Mismo diseño visual**: A pesar de reconstruir los estilos desde cero con SCSS, se preservan al 100% las proporciones, paletas, efectos hover, transiciones y adaptabilidad responsive originales.
 
 ---
 
 ## Archivos Principales del Proyecto
 
-* **[index.html](index.html)**: Código fuente principal de la aplicación web. Desarrollado con **HTML5 semántico**, **Bootstrap 5.3**, estilos personalizados en Vanilla CSS y JavaScript para el control interactivo del cambio de tema y el menú hamburguesa. Totalmente adaptado para pantallas de escritorio, tablets y dispositivos móviles.
-* **[MOCKUP.jpg](MOCKUP.jpg)**: Imagen de diseño conceptual y esquema de referencia inicial. Ilustra la estructura base que guio la composición de la web: barra de navegación superior corporativa, disposición del contenido (título y texto a un lado, imagen al otro) y la fila inferior con tarjetas de datos destacados.
+* **[index.html](index.html)**: Código fuente principal de la aplicación web. Desarrollado con **HTML5 semántico**, **Bootstrap 5.3**, estilos generados mediante SCSS y JavaScript para la interactividad del cambio de tema y menú móvil.
+* **[scss/](scss/)**: Directorio con los archivos fuente en SCSS:
+  * **[scss/styles.scss](scss/styles.scss)**: Hoja principal con variables, funciones, mixins, tipografía, navegación, secciones, rejilla de jugadores y footer.
+  * **[scss/dark.scss](scss/dark.scss)**: Variables y reglas específicas para la adaptación al modo oscuro.
+* **[css/](css/)**: Archivos CSS compilados a partir de los SCSS:
+  * **[css/styles.css](css/styles.css)**: Estilos base compilados.
+  * **[css/dark.css](css/dark.css)**: Estilos del modo oscuro compilados.
+* **[MOCKUP.jpg](MOCKUP.jpg)**: Imagen de diseño conceptual y esquema de referencia inicial que define la estructura y composición visual de la web.
 
 ---
 
@@ -49,9 +70,10 @@ La navegación principal se compone de **5 secciones clave** accesibles desde la
 
 ## Características Técnicas y Diseño
 
-* **Diseño Responsivo**: Rejilla fluida y puntos de ruptura de Bootstrap adaptados a cualquier resolución.
-* **Tipografía Corporativa**: Integración de la fuente tipográfica `MontecatiniPro`.
-* **Modo Oscuro / Claro**: Conmutador dinámico que conmuta hojas de estilo (`styles.css` y `dark.css`), iconos y mosaicos de fondo.
+* **Preprocesador SASS / SCSS**: Código modular, anidamiento jerárquico, variables, mixins responsivos y funciones reutilizables.
+* **Diseño Responsivo**: Rejilla fluida y puntos de ruptura adaptados a cualquier resolución de pantalla (móvil, tablet y escritorio).
+* **Tipografía Corporativa**: Integración de la fuente tipográfica corporativa `MontecatiniPro`.
+* **Modo Oscuro / Claro**: Conmutador dinámico que alterna entre las hojas de estilo (`styles.css` y `dark.css`), iconos y mosaicos de fondo.
 
 ---
 
@@ -61,7 +83,8 @@ La hoja de estilos (`css/styles.css`) ha sido validada satisfactoriamente median
 
 ![Validación W3C CSS](img/2026-10-19_21-37.png)
 
+---
+
 ## Enlace web - SASS
 
 Enlace web: [https://LastraMigue.github.io/LandingResponsiva_SASS](https://LastraMigue.github.io/LandingResponsiva_SASS)
-
